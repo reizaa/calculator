@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <!-- <form action="" name="calc">
+            <div class="screen">
+                <div class="heading">Calculator</div>
+                <input type="text" name="result">
+            </div>
+        </form> -->
+        <form action="" name="calc">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td><input class="screen frt" type="text" name="result"></td>
+                </tr>
+                <tr>
+                    <td><input class="screen sec" type="text" name="result2" style="text-align:right"></td>
+                </tr>
+            </table>
+        </form>
+        <table class="key" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="50px"><center><input class="push clr exc" type="button" value="Clr" onclick="clears()"></center></td>
+                <td width="50px"><center><input class="push del exc" type="button" value="Del" onclick="backspc()"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="(" onclick="insert('(')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value=")" onclick="insert(')')"></center></td>
+            </tr>
+            <tr>
+                <td width="50px"><center><input class="push opr exc" type="button" value="Ans" onclick="ans()"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="**" onclick="insert('**')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="%" onclick="insert('%')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="/" onclick="insert('/')"></center></td>
+            </tr>
+            <tr>
+                <td width="50px"><center><input class="push" type="button" value="7" onclick="insert('7')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="8" onclick="insert('8')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="9" onclick="insert('9')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="x" onclick="insert('*')"></center></td>
+            </tr>
+            <tr>
+                <td width="50px"><center><input class="push" type="button" value="4" onclick="insert('4')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="5" onclick="insert('5')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="6" onclick="insert('6')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="-" onclick="insert('-')"></center></td>
+            </tr>
+            <tr>
+                <td width="50px"><center><input class="push" type="button" value="1" onclick="insert('1')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="2" onclick="insert('2')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="3" onclick="insert('3')"></center></td>
+                <td width="50px"><center><input class="push opr exc" type="button" value="+" onclick="insert('+')"></center></td>
+            </tr>
+            <tr>
+                <td width="50px"><center><input class="push" type="button" value="0" onclick="insert('0')"></center></td>
+                <td width="50px"><center><input class="push" type="button" value="00" onclick="insert('00')"></center></td>
+                <td width="50px"><center><input class="push opr" type="button" value="." onclick="insert('.')"></center></td>
+                <td width="50px"><center><input class="push equ exc" type="button" value="=" onclick="equal()"></center></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function insert(num) {
+            calc.result.value = calc.result.value + num
+        }
+
+        function equal() {
+            calc.result2.value = eval(calc.result.value)
+        }
+
+        function backspc() {
+            calc.result.value = calc.result.value.substring(0, calc.result.value.length - 1)
+        }
+
+        function clears() {
+            calc.result.value = ''
+            calc.result2.value = '0'
+        }
+
+        function ans() {
+            calc.result.value = eval(calc.result.value)
+        }
+
+    </script>
+</body>
+</html>
