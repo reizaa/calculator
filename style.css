@@ -1,17 +1,17 @@
 .push {
-    background-color: #8a8d94;
+    background-color: #7a7c81;
     font-size: 15px;
     font-weight:bold;
-    color: #000000;
+    color: #f8f8f8;
     width : 70px;
     height: 40px;
     opacity: 1;
     /* border:0; */
-    border: 0.3px solid #767e83;
+    border: 0.3px solid #969a9c;
 }
 
 .opr {
-    color:#141210;
+    color:#f8f8f8;
 }
 
 .exc {
