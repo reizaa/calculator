@@ -1,13 +1,29 @@
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #6e72e2;
+    background-image: url("https://wallpaperaccess.com/full/1390896.jpg");
+    background-size: cover;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+h1 {
+    margin-top: 5%;
+    letter-spacing: 7px;
+    color:#ffffff;
+    font-size: 60px;
+}
+
 .push {
-    background-color: #7a7c81;
+    background-color: #7a7c8186;
     font-size: 15px;
     font-weight:bold;
     color: #f8f8f8;
     width : 70px;
     height: 40px;
-    opacity: 1;
+    /* display: inline-block; */
     /* border:0; */
-    border: 0.3px solid #969a9c;
+    border: 0.3px solid #969a9ce7;
 }
 
 .opr {
@@ -15,23 +31,23 @@
 }
 
 .exc {
-    background-color: #5c6068;
+    background-color: #5c606886;
 }
 
 .del {
-    background-color: #e68b4f;
+    background-color: #e68b4f86;
 }
 
 .clr{
-    background-color: #e26f6f
+    background-color: #e26f6f86;
 }
 .equ {
-    background-color: #6e72e2
+    background-color: #6e72e286;
 }
 
 
 .push:hover {
-    opacity: 0.7;
+    background-color: #11111441;
 }
 
 .screen {
@@ -39,11 +55,11 @@
     width : 280px;
     height: 40px;
     font-size: 25px;
-    background-color: #000000;
+    background-color: #00000080;
     border: 0px solid #000000;
 }
 .frt {
-    border-top: 2px solid #f8b45a;
+    border-top: 2px solid #e7e7e7;
     /* border-top-color: #f8b45a; */
     margin: 20px 20px 0px 5px;
     padding: 0px;
@@ -59,10 +75,22 @@
 }
 
 .container {
-    background-color: #0c0c14;
-    margin: 20px 20px;
-    width : 289px;
+    /* background-color: #0c0c14; */
+    margin-top: 5%;
+    /* margin: 10% 50% 10% 40%; */
+    padding : 0px;
+    width : 290px;
     height: 380px;
     border: 0.5px solid #dee7ec;
     border-radius: 7px;
+}
+
+.preview {
+    opacity: 0.5;
+}
+
+@media (max-width:1000px){
+    body {
+        background-size: inherit;
+    }
 }
