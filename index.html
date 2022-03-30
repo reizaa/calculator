@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap">
 </head>
 <body>
-    <div class="container">
+    <center><h1>Calculator</h1></center>
+    <center><div class="container">
+
+        <!-- <form action="" name="calc">
+            <div class="screen">
+                <div class="heading">Calculator</div>
+                <input type="text" name="result">
+            </div>
+        </form> -->
         <form action="" name="calc">
             <table border="0" cellpadding="0" cellspacing="0">
                 <tr>
                     <td><input class="screen frt" type="text" name="result"></td>
                 </tr>
                 <tr>
+                    <!-- <td><div class="screen sec" name="result2" style="text-align:right"></div></td> -->
                     <td><input class="screen sec" type="text" name="result2" style="text-align:right"></td>
                 </tr>
             </table>
@@ -54,13 +64,19 @@
                 <td width="50px"><center><input class="push" type="button" value="0" onclick="insert('0')"></center></td>
                 <td width="50px"><center><input class="push" type="button" value="00" onclick="insert('00')"></center></td>
                 <td width="50px"><center><input class="push opr" type="button" value="." onclick="insert('.')"></center></td>
-                <td width="50px"><center><input class="push equ exc" type="button" value="=" onclick="equal()"></center></td>
+                <td width="50px"><center><input class="push equ exc" type="button" value="=" onclick="results()"></center></td>
             </tr>
         </table>
-    </div>
-    <script>
+    </div></center>
+    <script class="last_res">
+        function results() {
+            calc.result2.value = eval(calc.result.value)
+        }
+    </script>
+    <script class="preview">
         function insert(num) {
             calc.result.value = calc.result.value + num
+            // equal()
         }
 
         function equal() {
@@ -69,6 +85,7 @@
 
         function backspc() {
             calc.result.value = calc.result.value.substring(0, calc.result.value.length - 1)
+            // equal()
         }
 
         function clears() {
